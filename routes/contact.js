@@ -14,7 +14,7 @@ router.post("/", async (req, res) => {
   try {
     const savedUser = await user.save();
     console.log("Add");
-    res.status(200).json({ msg: savedUser });
+    res.status(200).json({ msg: savedUser.name });
   } catch (err) {
     res.status(400).json({ msg: err });
   }

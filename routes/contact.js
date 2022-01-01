@@ -9,7 +9,7 @@ router.post("/", async (req, res) => {
     name: req.body.name,
     email: req.body.email,
     phone: req.body.phone,
-    message: req.body.message,
+    // message: req.body.message,
   });
   try {
     const savedUser = await user.save();

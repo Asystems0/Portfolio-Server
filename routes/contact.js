@@ -12,6 +12,13 @@ router.post("/", async (req, res) => {
     // message: req.body.message,
   });
   try {
+    if (await User.findOne({ email: req.body.email })) {
+      res.status(400).json({ msg: "Email is already exist." });
+    }
+
+    if (await User.findOne({ phone: req.body.phone })) {
+      res.status(400).json({ msg: "Phone number is already exist." });
+    }
     const savedUser = await user.save();
     console.log("Add");
     res.status(200).json({ msg: savedUser.name });

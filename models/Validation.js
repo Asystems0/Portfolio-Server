@@ -21,22 +21,6 @@ const registerValidtaion = (data) => {
       "string.max": `Phone number should have a maximum length of 10 numbers`,
       "any.required": `Phone number is a required field`,
     }),
-
-    // .message({
-    //   "number.required": `Phone number is a required field`,
-    //   "numer.min": `Phone number must have min 8 digits.`,
-    //   "numer.max": `Phone number must have min 10 digits.`,
-    // })
-
-    // phone: Joi.string()
-    //   .regex(/^[0-9]{7}$/)
-    //   .messages({
-    //     "string.pattern.base": `Phone number must have 10 digits.`,
-    //     "any.required": `Email is a required field`,
-    //   })
-    //   .required(),
-
-    // message: Joi.string().allow(null, ""),
   });
 
   return schema.validate(data);

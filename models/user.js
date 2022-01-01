@@ -6,12 +6,14 @@ const User = new Schema({
     type: String,
     unique: true,
     required: [true, "Must provide email"],
+    minlength: 6,
+    maxlength: 32,
   },
   phone: {
     type: String,
     unique: true,
     required: true,
-    minlength: 7,
+    minlength: 8,
     maxlength: 10,
   },
 
@@ -19,12 +21,7 @@ const User = new Schema({
     type: String,
     required: [true, "Must provide name"],
     minlength: 3,
-    maxlength: 15,
-  },
-  message: {
-    type: String,
-    required: false,
-    maxlength: 128,
+    maxlength: 16,
   },
   date: {
     type: Date,

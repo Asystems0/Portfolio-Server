@@ -20,8 +20,8 @@ const User = new Schema({
   name: {
     type: String,
     required: [true, "Must provide name"],
-    minlength: 3,
-    maxlength: 16,
+    minlength: 2,
+    maxlength: 20,
   },
   date: {
     type: Date,

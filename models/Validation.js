@@ -3,7 +3,7 @@ const Joi = require("joi");
 
 const registerValidtaion = (data) => {
   const schema = Joi.object({
-    name: Joi.string().min(6).max(16).required().messages({
+    name: Joi.string().min(2).max(20).required().messages({
       "string.empty": `Name cannot be an empty field`,
       "string.min": `Name should have a minimum length of 6 characters`,
       "string.max": `Name should have a maximum length of 16 characters`,
